@@ -1,36 +1,66 @@
 {
-    "env": {
-        "browser": true,
-        "es6": true,
-        "node": true
+"plugins":[
+"react"
+],
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "node": true,
+    "mocha": true
+  },
+  "parserOptions": {
+      ":ecmaVersion":6,
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "jsx": true
     },
-    "extends": "eslint:recommended",
-    "parserOptions": {
-        "ecmaFeatures": {
-            "experimentalObjectRestSpread": true,
-            "jsx": true
-        },
-        "sourceType": "module"
-    },
-    "plugins": [
-        "react"
+    "sourceType": "module"
+  },
+  "extends": ["eslint:recommended", "plugin:react/recommended", "google"],
+  "rules": {
+    "indent": [
+      "warn",
+      2
     ],
-    "rules": {
-        "indent": [
-            "warn",
-            4
-        ],
-        "linebreak-style": [
-            "error",
-            "unix"
-        ],
-        "quotes": [
-            "warn",
-            "single"
-        ],
-        "semi": [
-            "error",
-            "always"
-        ]
-    }
-}
+    "linebreak-style": [
+      "error",
+      "unix"
+    ],
+    "quotes": [
+      "warn",
+      "single"
+    ],
+    "semi": [
+      "error",
+      "always"
+    ],
+    "no-console": [
+      "warn"
+    ],
+    "valid-jsdoc": [
+      "warn"
+    ],
+    "eqeqeq": [
+      "warn"
+    ],
+    "default-case": [
+      "warn"
+    ],
+    "require-await": [
+      "warn"
+    ],
+    "no-unused-vars": ["error", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }],
+    "no-empty-function": ["error"],
+    "no-new": ["warn"],
+    "strict": ["error", "global"],
+    "camelcase": ["warn"],
+    "func-style": ["warn", "expression"],
+    "func-names": ["warn", "never"],
+    "object-curly-spacing": ["error"],
+    "no-class-assign":["off"],
+    "comma-spacing": ["error", {
+      "before": false,
+      "after": true
+    }]
+  }}
